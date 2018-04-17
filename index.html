@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>css-defer</title>
     <link>
     <!--<link href="libs.css" rel="stylesheet">-->
     <!--<link href="style-index.css" rel="stylesheet">-->
-    <script type="text/javascript">
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, architecto dolor exercitationem, facilis incidunt
+    neque, nostrum obcaecati quaerat quasi qui quo sapiente sint tempora ullam vel veritatis voluptas! Illum, quia?</p>
+<script src="jquery.min.js"></script>
+<script>
+    $(function () {
+        console.log('dom is ready');
         /* First CSS File */
         var giftofspeed = document.createElement('link');
         giftofspeed.rel = 'stylesheet';
@@ -22,10 +28,8 @@
         giftofspeed2.type = 'text/css';
         var godefer2 = document.getElementsByTagName('link')[0];
         godefer2.parentNode.insertBefore(giftofspeed2, godefer2);
-    </script>
-</head>
-<body>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, architecto dolor exercitationem, facilis incidunt
-    neque, nostrum obcaecati quaerat quasi qui quo sapiente sint tempora ullam vel veritatis voluptas! Illum, quia?</p>
+    });
+    console.log('script is ready');
+</script>
 </body>
 </html>
